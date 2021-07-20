@@ -9,5 +9,9 @@ To get started, only a few configurations and you are good to go
 Username : admin
 Password : codejava
 
+Username : Delight
+Password : nyauta
+
+Enjoy
 
 Thanks
