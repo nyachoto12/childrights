@@ -1,0 +1,62 @@
+<div th:insert="layouts/header"></div>
+
+
+<div class="row">
+
+
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Users: All</div>
+
+			<div class="panel-body">
+			 <a href="/">Home</a> | <a href="/admin/userAdd">Add New User</a> | <a href="/admin/allUser">User List</a>
+                <hr/>
+				<div class="alert alert-success fade in hidden">
+					<button aria-hidden="true" data-dismiss="alert" class="close"
+						type="button">×</button>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<table id="staticDataList"
+							class=" table table-striped table-responsive-md" cellspacing="0"
+							boader=1>
+							<thead style="background-color: #15075c !important; color: #fff">
+								<th>Username</th>
+								<th>Email Address</th>
+								<th>Actions</th>
+							</thead>
+							<tfoot style="background-color: #40779c !important; color: #fff">
+								<th>Username</th>
+								<th>Email Address</th>
+								<th>Actions</th>
+							</tfoot>
+
+							<tbody>
+
+								<tr th:each="u : ${user}">
+									<td><a href="" th:text="${u.username}"
+										style="color: #15075c !important;"></a></td>
+									<td><a href="" th:text="${u.email}"
+										style="color: #15075c !important;"></a></td>
+									<td> <a href="#"
+										class="btn btn-danger">Delete</a></td>
+
+									<!-- Modal HTML -->
+
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="panel-footer"></div>
+		</div>
+	</div>
+
+</div>
+</div>
+<div th:insert="layouts/footer"></div>

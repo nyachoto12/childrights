@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Child Rights : MoHCC</title>
+<link href="../assets/bootstrap/css/bootstrap.min.css " rel="stylesheet">
+<link href="../assets/css/plugins/metisMenu/metisMenu.min.css "
+	rel="stylesheet">
+<link href="../assets/css/sb-admin-2.css " rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<style>
+label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	color: #FF0000;
+}
+
+select.error, textarea.error, input.error {
+	color: #FF0000;
+}
+
+</style>
+
+
+<div  align="center" style="background-color : #15075c; padding : 1px">
+	<h3 style="font-size:30px;color : #fff; ">Ministry of Health and Child Care</h3>
+</div>
+<div id="wrapper" style="margin-bottom: 0px auto;">
+
+
+
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-static-top" role="navigation"
+		style="margin-bottom: 0px; background-color : rgb(0, 53, 106) !important; ">
+
+		<h4>
+			<a href="/" style="margin-left: 50px; color : #fff !important;"> Home </a> &nbsp;
+			<a th:href="@{/admin/allUser}" title="Create New Employee"
+				style="margin-left: 28px; color : #fff !important;"> Manage User </a>&nbsp; &nbsp; 
+			<a href="/" style="margin-left: 28px ; color : #fff !important;" th:text="'User: ' + ${#request.userPrincipal.principal.username}"
+			class="text-center"> </a>&nbsp;
+
+
+			<form th:action="@{/logout}" method="post" th:hidden="true"
+				name="logoutForm">
+				     <input type="submit" value="Logout" />
+			</form>
+
+			<a style="margin-left: 28px; color : #fff !important;"
+				href="javascript: document.logoutForm.submit()">Logout</a>
+
+		</h4>
+		<div class="navbar-default sidebar" role="navigation">
+			<div class="sidebar-nav navbar-collapse">
+				<ul class="nav" id="side-menu">
+					<li><a href="#"><i class="fa fa-dashboard fa-fw"></i> Home
+					</a></li>
+
+					<li><a th:href="@{/admin/addNewChild}"><i
+							class="fa fa-table fa-fw"></i> New Child Data</a></li>
+
+					<li><a href="javascript: document.logoutForm.submit()"><i
+							class="fa fa-edit fa-fw"></i> Log Out</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+	<div id="page-wrapper">
+		<br> <br>
+
+
+
+		<style type="text/css">
+input[type="text"] {
+	height: 4em;
+	font-size: 16px;
+}
+</style>
+
+		<style type="text/css">
+.even {
+	background: #F5F5F5;
+}
+
+.odd {
+	background: #fff;
+}
+
+.logout {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+	<!-- Modal -->
+
+	<div class="row">

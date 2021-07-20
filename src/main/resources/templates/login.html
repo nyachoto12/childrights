@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Child Rights : Sign In</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<style>
+label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	color: #FF0000;
+}
+
+select.error, textarea.error, input.error {
+	color: #FF0000;
+}
+</style>
+
+
+<div align="center" style="background-color: #15075c; padding: 1px">
+	<h3 style="font-size: 30px; color: #fff;">Ministry of Health and
+		Child Care</h3>
+</div>
+<div id="wrapper" style="margin-bottom: 0px auto;">
+
+
+
+
+	<!-- Navigation -->
+	<nav class=""
+		style="margin-bottom: 0px; background-color: rgb(0, 53, 106) !important; padding: 3px;">
+
+		<h6>
+			<a href="/" style="margin-left: 50px; list-style: none;">
+				Ministry of Health and Child Care </a> &nbsp;
+		</h6>
+
+
+	</nav>
+
+	<div id="page-wrapper">
+		<style type="text/css">
+</style>
+
+		<style type="text/css">
+.even {
+	background: #F5F5F5;
+}
+
+.odd {
+	background: #fff;
+}
+
+.logout {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 20;
+	width: 100%;
+	color: rgb(255, 0, 0);
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+	<!-- Modal -->
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				
+				<div class="card m-3">
+					<div class="card-header text-success text-center"
+						style="background-color: #15075c;">Please Sign In</div>
+
+					<div class="card-body">
+						<form class="login-form" th:action="@{/login}" method="post">
+
+							<div class="form-group">
+								<input class="form-control" type="text" name="username" value=""
+									placeholder="Username" required autofocus />
+								<p class="help-block"></p>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="password" name="password"
+									value="" placeholder="Password" required />
+								<p class="help-block"></p>
+							</div>
+							<div class="form-group ">
+								<input style="background-color: #15075c; color: #fff;"
+									class="btn " type="submit" name="login" value="Login" required />
+								<p class="help-block"></p>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+				<div th:if="${param.error}" class="alert alert-error">
+
+					<h5 style="color: red; background-color: white; font-size: larger;">&nbsp;Invalid
+						Credentials</h5>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<footer class="footer mt-5"> Designed and Developed by MoHCC
+		Devs Team. </footer>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+</html>

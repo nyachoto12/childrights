@@ -1,0 +1,79 @@
+<div th:insert="layouts/header"></div>
+
+
+<div class="row">
+
+
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Child Data: All</div>
+
+			<div class="panel-body">
+			<a href="/">Home</a> | <a href="/admin/addNewChild">Add New Child</a> | <a href="/admin/childAll">Children List</a>
+				<div class="alert alert-success fade in hidden">
+					<button aria-hidden="true" data-dismiss="alert" class="close"
+						type="button">×</button>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<table id="staticDataList"
+							class=" table table-striped table-responsive-md" cellspacing="0"
+							boader=1>
+							<thead style="background-color: #15075c !important; color: #fff">
+								<th>FirstName</th>
+								<th>Surname</th>
+								<th>Gender</th>
+								<th>Age</th>
+								<th>Address</th>
+								<th>Actions</th>
+							</thead>
+							<tfoot style="background-color: #40779c !important; color: #fff">
+								<th>FirstName</th>
+								<th>Surname</th>
+								<th>Gender</th>
+								<th>Age</th>
+								<th>Address</th>
+								<th>Actions</th>
+							</tfoot>
+
+							<tbody>
+
+								<tr th:each="u : ${child}">
+									<td><a href="" th:text="${u.name}"
+										style="color: #15075c !important;"></a></td>
+									<td><a href="" th:text="${u.surname}"
+										style="color: #15075c !important;"></a></td>
+									<td><a href="" th:text="${u.gender}"
+										style="color: #15075c !important;"></a></td>
+									<td><a href="" th:text="${u.age}"
+										style="color: #15075c !important;"></a></td>
+									<td><a href="" th:text="${u.address}"
+										style="color: #15075c !important;"></a></td>
+
+									<td><a th:href="@{/updateChild/{id}(id=*{u.id})}"
+										class="btn btn-primary btn-sm mb-3">Update</a> <a
+										th:href="@{/deleteChild/{id}(id=*{u.id})}"
+										class="btn btn-danger">Delete</a></td>
+
+									<!-- Modal HTML -->
+
+								</tr>
+
+
+
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="panel-footer"></div>
+		</div>
+	</div>
+
+</div>
+</div>
+<div th:insert="layouts/footer"></div>

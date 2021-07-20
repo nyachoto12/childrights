@@ -1,0 +1,219 @@
+.navbar-brand {
+    /*background: url(../../../resources/images/vmahs.png) no-repeat;
+    min-width: 278px;*/
+}
+
+.even {
+    background: #F5F5F5;
+}
+
+.odd {
+    background: #fff;
+}
+
+/*#noti_Container {
+    position: relative;
+}*/
+
+#noti_Container {
+    color: black;
+    display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+    position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+    padding: 2px 5px;
+    cursor:pointer;
+}
+#noti_Button {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: green;
+    margin: -3px 10px 0 10px;
+    cursor: pointer;
+}
+
+.button {
+    color: green;
+    display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+    position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+    padding: 2px 5px;
+    cursor:pointer;/* Add some padding so it looks nice */
+}
+.noti_Counter {
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: 0;
+    right: 0;
+}
+
+#pending_renewals{
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+
+.pending_applications{
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+
+.pending_material{
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+.pending_renewals{
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+
+.approved_applications{
+    background-color: green;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+
+
+.declined_applications{
+    background-color: coral;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+}
+
+
+.approved_material{
+    background-color: green;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+    font-weight: bold;
+
+    top: 0;
+    right: 0;
+}
+
+
+#notifications {
+    color: black;
+    display: none;
+    width: 430px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #FFF;
+    border: solid 1px rgba(100, 100, 100, .20);
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .20);
+    z-index: 0;
+}
+
+#notifications:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    color: transparent;
+    border: 10px solid #CCC;
+    border-color: transparent transparent #FFF;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.noti {
+    background: #F6F7F8;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border-top: solid 1px rgba(100, 100, 100, .30);
+}
+
+.notii {
+    background: #ffffff;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border-top: solid 1px rgba(100, 100, 100, .30);
+    border-bottom: solid 1px rgba(100, 100, 100, .30);
+}
+
+.noti a{
+    color: #3b5998;
+}
+
+
+.notii a{
+    color: #3b5998;
+}
+
+.seeAll {
+    background: #F6F7F8;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-top: solid 1px rgba(100, 100, 100, .30);
+    text-align: center;
+
+}
+
+.seeAll a {
+    color: #3b5998;
+}
+
+.seeAll a:hover {
+    background: #F6F7F8;
+    color: #3b5998;
+    text-decoration: underline;
+}
